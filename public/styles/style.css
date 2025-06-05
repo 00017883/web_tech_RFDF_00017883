@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #3c8dbc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #3c8dbc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form {
+    margin-top: 10px;
+}

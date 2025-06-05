@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= typeof title !== 'undefined' ? title : "Pet App" %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pet Adoption App</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/pets">Pets</a> |
+            <a href="/pets/new">Add Pet</a>
+        </nav>
+    </header>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

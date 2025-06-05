@@ -1,0 +1,20 @@
+<h2>All Pets</h2>
+
+<% if (pets.length === 0) { %>
+    <p>No pets available.</p>
+<% } else { %>
+    <ul>
+        <% pets.forEach(pet => { %>
+            <li>
+                <strong><%= pet.name %></strong> 
+                (<%= pet.species %>, Age: <%= pet.age %>)<br>
+                <em><%= pet.description %></em><br>
+
+                <a href="/pets/<%= pet.id %>/edit">Edit</a> |
+                <form action="/pets/<%= pet.id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+<% } %>

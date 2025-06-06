@@ -3,16 +3,16 @@
 <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
     <ul style="color: red;">
         <% errors.forEach(error => { %>
-            <li><%= error %></li>
+            <li><%= error.msg %></li>
         <% }); %>
     </ul>
 <% } %>
 
 <form action="<%= formAction %>" method="POST">
-    <label>Name: <input type="text" name="name" value="<%= pet.name || '' %>"></label><br>
-    <label>Species: <input type="text" name="species" value="<%= pet.species || '' %>"></label><br>
-    <label>Age: <input type="text" name="age" value="<%= pet.age || '' %>"></label><br>
-    <label>Description:<br>
+    <label><div>Name: </div><input type="text" name="name" value="<%= pet.name || '' %>"></label><br>
+    <label><div>Species: </div><input type="text" name="species" value="<%= pet.species || '' %>"></label><br>
+    <label><div>Age: </div><input type="text" name="age" value="<%= pet.age || '' %>"></label><br>
+    <label><div>Description: </div><br>
         <textarea name="description"><%= pet.description || '' %></textarea>
     </label><br>
     <button type="submit"><%= pet.id ? 'Update' : 'Create' %></button>

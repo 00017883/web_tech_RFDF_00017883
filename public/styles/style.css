@@ -9,17 +9,67 @@ header {
     background: #3c8dbc;
     color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-bottom: 20px;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    /*position: fixed;*/
+}
+
+.title-container {
+    width: 20%;
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+    position: relative;
+}
+
+.title-container-two {
+    width: 70%;
+    height: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0;
+    margin: 0px;
+    border: 0;
+    position: relative;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+}
+
+nav {
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
     color: white;
     margin-right: 10px;
     text-decoration: none;
+    background-color:#3c8dbc;
+    border-radius: 15px;
+    padding: 5px 60px;
 }
 
-h1, h2 {
+#clock {
+    width: 10%;
+    font-size: xx-large;
+}
+
+h1 {
+    color: #f4f4f4;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
     color: #3c8dbc;
 }
 
@@ -35,6 +85,76 @@ li {
     border-radius: 4px;
 }
 
+#buttons_div {
+    margin-top: 20px;
+}
+
 form {
     margin-top: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    background-color: #3c8dbc;
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+
+label div {
+    width: 10%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+button {
+    padding: 10px 40px;
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+}
+
+#edit_button {
+    padding: 10px 40px;
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
 }

@@ -19,19 +19,7 @@ exports.createPet = [
     ...registerPetValidator(), 
     (req, res) => {
         const { name, species, age, description } = req.body;
-    // const errors = [];
-
-//    if (!name || !species || !age) {
-//        errors.push('All fields are required.');
-//    }
-
-//    if (errors.length > 0) {
-//        return res.render('pets/create_update', {
-//            errors,
-//            pet: { name, species, age, description },
-//            formAction: '/pets'
-//        });
-//    }
+        
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.render('pets/create_update', {
@@ -59,25 +47,24 @@ exports.showEditForm = (req, res) => {
 };
 
 // Handle updating an existing pet
-exports.updatePet = (req, res) => {
-    const { name, species, age, description } = req.body;
-    const errors = [];
+exports.updatePet = [
+    ...registerPetValidator(),
+    (req, res) => {
+        const errors = validationResult(req);
+        const { name, species, age, description } = req.body;
 
-    if (!name || !species || !age) {
-        errors.push('All fields are required.');
+        if (!errors.isEmpty()) {
+            return res.render('pets/create_update', {
+                errors: errors.array(),
+                pet: { id: req.params.id, name, species, age, description },
+                formAction: `/pets/${req.params.id}`
+            });
+        }
+
+        petsService.updatePet(req.params.id, { name, species, age, description });
+        res.redirect('/pets');
     }
-
-    if (errors.length > 0) {
-        return res.render('pets/create_update', {
-            errors,
-            pet: { id: req.params.id, name, species, age, description },
-            formAction: `/pets/${req.params.id}`
-        });
-    }
-
-    petsService.updatePet(req.params.id, { name, species, age, description });
-    res.redirect('/pets');
-};
+];
 
 // Handle deleting a pet
 exports.deletePet = (req, res) => {

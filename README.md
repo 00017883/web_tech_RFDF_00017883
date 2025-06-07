@@ -3,6 +3,8 @@
 ## Description
 This is a web application developed as part of the Web Technology coursework for RF/DF
 
+And this current README.md file is also based on VisaulStucdioCode's recomended framework
+
 ## Features
 - Interface
 - Responsive design
@@ -35,7 +37,7 @@ This is a web application developed as part of the Web Technology coursework for
     ```
 
 ## Usage
-Access the application in your browser at `http://localhost:3000` (or the specified port).
+Access the application: https://web-tech-rfdf-00017883.onrender.com/
 
 ## Author
 00017883

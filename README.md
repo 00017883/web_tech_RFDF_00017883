@@ -1,19 +1,20 @@
 # Web Application
 
 ## Description
-This is a web application developed as part of the Web Technology coursework. It aims to demonstrate modern web development practices and technologies.
+This is a web application developed as part of the Web Technology coursework for RF/DF
 
 ## Features
-- User-friendly interface
+- Interface
 - Responsive design
 - Dynamic content rendering
 - Backend integration
 
 ## Technologies Used
 - HTML, CSS, JavaScript
-- Frameworks/Libraries: Node.js, Express.js
+- Frameworks/Libraries: Node.js, Express.js, UUID (for creating unique IDs for new users)
 - Backend: Node.js with Express.js
-- Database: [Specify your database]
+- Validation: 'express-validator'
+- ChatGPT for supporting a better structure
 
 ## Installation
 1. Clone the repository:
@@ -35,9 +36,6 @@ This is a web application developed as part of the Web Technology coursework. It
 
 ## Usage
 Access the application in your browser at `http://localhost:3000` (or the specified port).
-
-## License
-This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 00017883

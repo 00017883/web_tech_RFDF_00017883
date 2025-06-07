@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "devStart": "node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "ejs": "^3.1.10",
